@@ -1,6 +1,5 @@
 {% set version = '0.1.2' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-sparsepca
@@ -13,8 +12,7 @@ source:
   sha256: 646f2244a57ae8d2e490e0913d4dc9dcf3dafeffb1104d225aaf847b46b56272
 
 build:
-  merge_build_host: True  # [win]
-  number: 3
+  number: 4
   noarch: generic
   rpaths:
     - lib/R/lib/
