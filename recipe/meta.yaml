@@ -1,4 +1,4 @@
-{% set version = '0.1.2' %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sparsepca_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sparsepca/sparsepca_{{ version }}.tar.gz
-  sha256: 646f2244a57ae8d2e490e0913d4dc9dcf3dafeffb1104d225aaf847b46b56272
+  sha256: 3bcba776c010e620bc35a76b513646070f8e359eccbfff6284a8e17575a0f72b
 
 build:
-  number: 5
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,16 +36,9 @@ test:
 about:
   home: https://github.com/erichson/spca
   license: GPL-3.0-only
-  summary: Sparse principal component analysis (SPCA) attempts to find sparse weight vectors
-    (loadings), i.e., a weight vector with only a few 'active' (nonzero) values. This
-    approach provides better interpretability for the principal components in high-dimensional
-    data settings. This is, because the principal components are formed as a linear
-    combination of only a few of the original variables. This package provides efficient
-    routines to compute SPCA. Specifically, a variable projection solver is used to
-    compute the sparse solution. In addition, a fast randomized accelerated SPCA routine
-    and a robust SPCA routine is provided. Robust SPCA allows to capture grossly corrupted
-    entries in the data. The methods are discussed in detail by N. Benjamin Erichson
-    et al. (2018) <arXiv:1804.00341>.
+  summary: Sparse principal component analysis (SPCA) attempts to find sparse weight vectors (loadings), i.e., a weight vector with only a few 'active' (nonzero) values. This approach provides better interpretability for the principal components in high-dimensional data settings. This is, because the principal 
+    components are formed as a linear combination of only a few of the original variables. This package provides efficient routines to compute SPCA. Specifically, a variable projection solver is used to compute the sparse solution. In addition, a fast randomized accelerated SPCA routine and a robust SPCA routine is 
+    provided. Robust SPCA allows to capture grossly corrupted entries in the data. The methods are discussed in detail by N. Benjamin Erichson et al. (2018) <arXiv:1804.00341>.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
